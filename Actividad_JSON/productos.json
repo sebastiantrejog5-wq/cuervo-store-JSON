@@ -1,0 +1,69 @@
+
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Playera Cuervo Store",
+      "descripcion": "Playera color guinda con diseño institucional TEC NL.",
+      "precio": 250,
+      "categoria": "Ropa",
+      "imagen": "playera"
+    },
+    {
+      "id": 2,
+      "nombre": "Sudadera Cuervo",
+      "descripcion": "Sudadera cómoda en color vino con diseño Cuervo.",
+      "precio": 550,
+      "categoria": "Ropa",
+      "imagen": "sudadera"
+    },
+    {
+      "id": 3,
+      "nombre": "Gorra TEC NL",
+      "descripcion": "Gorra ajustable color guinda con distintivo TEC NL.",
+      "precio": 220,
+      "categoria": "Accesorios",
+      "imagen": "gorra"
+    },
+    {
+      "id": 4,
+      "nombre": "Termo Cuervo Store",
+      "descripcion": "Termo reutilizable para bebidas frías y calientes.",
+      "precio": 290,
+      "categoria": "Accesorios",
+      "imagen": "termo"
+    },
+    {
+      "id": 5,
+      "nombre": "Mochila Universitaria",
+      "descripcion": "Mochila resistente para libros, laptop y útiles escolares.",
+      "precio": 650,
+      "categoria": "Escolar",
+      "imagen": "mochila"
+    },
+    {
+      "id": 6,
+      "nombre": "Libreta Cuervo Store",
+      "descripcion": "Libreta de apuntes con diseño guinda institucional.",
+      "precio": 95,
+      "categoria": "Escolar",
+      "imagen": "libreta"
+    },
+    {
+      "id": 7,
+      "nombre": "Taza TEC NL",
+      "descripcion": "Taza blanca con diseño TEC NL para uso diario.",
+      "precio": 150,
+      "categoria": "Accesorios",
+      "imagen": "taza"
+    },
+    {
+      "id": 8,
+      "nombre": "Llavero TEC NL",
+      "descripcion": "Llavero metálico decorativo con diseño institucional.",
+      "precio": 75,
+      "categoria": "Accesorios",
+      "imagen": "llavero"
+    }
+  ]
+}

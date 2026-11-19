@@ -1,0 +1,373 @@
+﻿
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuervo Store | Tecnológico de Nuevo León</title>
+
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO DE LA TIENDA -->
+
+    <header class="encabezado">
+
+        <div class="marca">
+
+            <!-- NUEVO LOGO DEL TECNOLÓGICO -->
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo3DOHhit9Pr40Usnaj3a0lVzBelUgLbJ1jjuB6vsBNdn5EIOnG-tjujuU&amp;s=10"
+                alt="Escudo del Instituto Tecnológico de Nuevo León"
+                class="logo-tecnologico"
+            >
+
+            <div>
+                <h1>CUERVO STORE</h1>
+                <p>Instituto Tecnológico de Nuevo León</p>
+            </div>
+
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Productos</a>
+            <a href="#agregar">Agregar producto</a>
+        </nav>
+
+    </header>
+
+
+    <!-- BIENVENIDA -->
+
+    <main>
+
+        <section class="bienvenida" id="inicio">
+
+            <div class="bienvenida-texto">
+
+                <span class="etiqueta-principal">
+                    TIENDA INSTITUCIONAL | PROYECTO ACADÉMICO
+                </span>
+
+                <h2>Bienvenido a Cuervo Store</h2>
+
+                <p>
+                    Una tienda digital creada para la comunidad
+                    del Instituto Tecnológico de Nuevo León.
+
+                    Encuentra playeras, sudaderas, accesorios,
+                    mochilas y artículos escolares con nuestra
+                    identidad institucional.
+                </p>
+
+                <a href="#catalogo" class="boton-blanco">
+                    Explorar productos
+                </a>
+
+            </div>
+
+
+            <!-- CUERVO ANIMADO -->
+
+            <div class="mascota">
+
+                <img
+                    src="https://static.vecteezy.com/system/resources/previews/057/415/968/non_2x/a-cartoon-crow-with-a-big-beak-and-yellow-eyes-vector.jpg"
+                    alt="Mascota animada Cuervo Store"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- BENEFICIOS -->
+
+        <section class="beneficios">
+
+            <div>🎓 Comunidad tecnológica</div>
+
+            <div>🛍️ Artículos institucionales</div>
+
+            <div>📱 Atención por WhatsApp</div>
+
+        </section>
+
+
+        <!-- CATÁLOGO DE PRODUCTOS -->
+
+        <section class="catalogo" id="catalogo">
+
+            <div class="titulo-seccion">
+
+                <div>
+
+                    <span class="subtitulo">
+                        NUESTRO CATÁLOGO
+                    </span>
+
+                    <h2>Productos Cuervo Store</h2>
+
+                    <p>
+                        Encuentra tu artículo favorito.
+                    </p>
+
+                </div>
+
+                <span id="totalProductos" class="contador">
+                    0 productos
+                </span>
+
+            </div>
+
+
+            <!-- BUSCADOR Y FILTROS -->
+
+            <div class="herramientas">
+
+                <input
+                    type="search"
+                    id="buscador"
+                    placeholder="Buscar productos..."
+                >
+
+                <select id="categoria">
+
+                    <option value="Todos">
+                        Todas las categorías
+                    </option>
+
+                    <option value="Ropa">Ropa</option>
+
+                    <option value="Accesorios">Accesorios</option>
+
+                    <option value="Escolar">Escolar</option>
+
+                </select>
+
+
+                <button id="btnAgregar" class="boton-vino">
+                    + Agregar producto
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCTOS CARGADOS DESDE JSON -->
+
+            <p id="estado" class="estado">
+                Cargando productos...
+            </p>
+
+            <div
+                id="contenedor-productos"
+                class="productos">
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO PARA AGREGAR PRODUCTOS -->
+
+        <section class="seccion-formulario" id="agregar">
+
+            <div id="formulario" class="formulario oculto">
+
+                <h2>Agregar nuevo producto</h2>
+
+                <p>
+                    Registra un nuevo artículo
+                    en el catálogo de Cuervo Store.
+                </p>
+
+                <form id="formProducto">
+
+                    <label for="nombre">
+                        Nombre del producto
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        required
+                    >
+
+
+                    <label for="descripcion">
+                        Descripción
+                    </label>
+
+                    <textarea
+                        id="descripcion"
+                        rows="3"
+                        required>
+                    </textarea>
+
+
+                    <label for="precio">
+                        Precio en MXN
+                    </label>
+
+                    <input
+                        type="number"
+                        id="precio"
+                        min="0.01"
+                        step="0.01"
+                        required
+                    >
+
+
+                    <label for="nuevaCategoria">
+                        Categoría
+                    </label>
+
+                    <select id="nuevaCategoria">
+
+                        <option value="Ropa">
+                            Ropa
+                        </option>
+
+                        <option value="Accesorios">
+                            Accesorios
+                        </option>
+
+                        <option value="Escolar">
+                            Escolar
+                        </option>
+
+                    </select>
+
+
+                    <div class="acciones">
+
+                        <button
+                            type="submit"
+                            class="boton-vino">
+                            Guardar producto
+                        </button>
+
+                        <button
+                            type="button"
+                            id="btnCancelar"
+                            class="boton-gris">
+                            Cancelar
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- VENTANA DE COMPRA Y WHATSAPP -->
+
+    <div id="modalCompra" class="modal oculto">
+
+        <div class="modal-contenido">
+
+            <button
+                id="cerrarModal"
+                class="cerrar"
+                aria-label="Cerrar ventana">
+                ×
+            </button>
+
+
+            <h2>
+                ¡Gracias por elegir Cuervo Store!
+            </h2>
+
+            <p>
+                Estás interesado en el siguiente producto:
+            </p>
+
+
+            <h3 id="productoSeleccionado"></h3>
+
+            <p id="precioSeleccionado"></p>
+
+
+            <!-- ASESOR ALEATORIO -->
+
+            <div class="asesor">
+
+                <h3>Tu asesor asignado</h3>
+
+                <p id="nombreAsesor"></p>
+
+                <p id="numeroAsesor"></p>
+
+            </div>
+
+
+            <p id="avisoWhatsapp" class="aviso"></p>
+
+
+            <button
+                id="btnWhatsapp"
+                class="boton-whatsapp">
+
+                Contactar por WhatsApp
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <h2>CUERVO STORE</h2>
+
+        <p>
+            Instituto Tecnológico de Nuevo León
+        </p>
+
+        <p>
+            Proyecto académico de desarrollo web
+            utilizando HTML, CSS, JavaScript y JSON.
+        </p>
+
+
+        <!-- CRÉDITOS DEL EQUIPO -->
+
+        <div class="creditos">
+
+            <h3>
+                PROYECTO ELABORADO POR EL EQUIPO 1
+            </h3>
+
+            <p>
+                Sebastián · Julio · Brayan · William
+            </p>
+
+        </div>
+
+
+        <small>
+            © 2026 Cuervo Store.
+            Proyecto escolar.
+        </small>
+
+    </footer>
+
+
+    <!-- CONEXIÓN CON JAVASCRIPT -->
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
